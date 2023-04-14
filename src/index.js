@@ -5,14 +5,14 @@ const session = require('express-session');
 const cookieParser = require('cookie-parser');
 const passport = require('passport');
 const flash = require('connect-flash');
-const { connectMongoDb } = require('./mongodb')
+//const { connectMongoDb } = require('./mongodb')
 const settings = require('./controllers/settings')
 
 const PORT = process.env.PORT || settings.port
 const users = require('./router/users')
 const todos = require('./router/todo')
 
-connectMongoDb()
+//connectMongoDb()
 
 app.use(session({
       secret: 'secret',
